@@ -71,4 +71,9 @@ protected void setBalance (double balance){
         this.balance = balance;
 }
 public abstract double calculateInterest();
+
+@Override
+public String toString() {
+    return "Account{id='" + accountId + "', owner='" + ownerName + "', balance=" + balance + "}";
+}
 }

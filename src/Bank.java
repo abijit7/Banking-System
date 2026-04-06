@@ -4,6 +4,14 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Bank {
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "bankName='" + bankName + '\'' +
+                ", accounts=" + accounts +
+                '}';
+    }
+
     private String bankName;
     private Map<String,Account> accounts;
     public Bank(String bankName){
@@ -22,5 +30,8 @@ public class Bank {
     }
     public List<Account> findAccountAboveBalance(double thresold){
         return accounts.values().stream().filter(a->a.getBalance()>thresold).collect(Collectors.toList());
+    }
+    public List<Account> displayAllAccounts(){
+        return accounts.values().stream().filter(a->a.getBalance()>0).collect(Collectors.toList());
     }
 }

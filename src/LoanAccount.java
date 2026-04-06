@@ -1,7 +1,7 @@
 public class LoanAccount extends Account{
 private double loanAmount;
 private double interestRate;
-    public LoanAccount(String accountId, String ownerName, double initalBalance,double loanAmount,double interestRate) {
+    public LoanAccount(String accountId, String ownerName,double loanAmount,double interestRate) {
         super(accountId, ownerName, -loanAmount);
     this.interestRate = interestRate;
     this.loanAmount = loanAmount;
