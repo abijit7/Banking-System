@@ -9,7 +9,9 @@ void main() {
     bank.addAccount(Ram);
     bank.addAccount(Sita);
     bank.addAccount(Hari);
-
+    bank.findAccountAboveBalance(2500);
+    bank.displayAllAccounts();
+    System.out.println(Ram.getTransactionHistory());
     System.out.println(bank);
 
 
