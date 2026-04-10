@@ -33,5 +33,11 @@ public class Bank {
     }
     public List<Account> displayAllAccounts(){
         return accounts.values().stream().filter(a->a.getBalance()>0).collect(Collectors.toList());
+
+    }
+    public void printTarnsactionHistory(String accountId){
+        Account account = findAccount(accountId);
+        System.out.println("history of "+account.getOwnerName());
+        account.getTransactionHistory().forEach(System.out::println);
     }
 }

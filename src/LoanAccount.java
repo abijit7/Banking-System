@@ -6,6 +6,11 @@ private double interestRate;
     this.interestRate = interestRate;
     this.loanAmount = loanAmount;
     }
+
+    public double getLoanAmount() {
+        return loanAmount;
+    }
+
     public double calculateInterest(){
         return loanAmount * interestRate;
     }
