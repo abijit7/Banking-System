@@ -71,6 +71,17 @@ public class Bank {
        }
        return richest;
     }
+
+    public double getAverageBalance() {
+        if (accounts.isEmpty()) {
+            throw new IllegalStateException("No accounts available");
+        }
+        return accounts.values().stream()
+                .mapToDouble(Account::getBalance)
+                .average()
+                .orElseThrow(() -> new IllegalStateException("No accounts available"));
+    }
+
     public List getAllOwners(){
         return accounts.values().stream().map(Account::getOwnerName).toList();
     }

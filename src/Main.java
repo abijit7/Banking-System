@@ -65,6 +65,7 @@ void main() {
     System.out.println("All loan accounts: " + bank.findAllLoanAccounts());
     //get all owners
     System.out.println("All account owners: " + bank.getAllOwners());
-
+//get average balance
+    System.out.println("Average balance: Rs " + bank.getAverageBalance());
 
 }
