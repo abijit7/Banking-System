@@ -55,4 +55,16 @@ void main() {
 
 // History
     bank.printTarnsactionHistory("1");
+
+    //search by owner name
+    System.out.println(bank.searchByOwnerName("ram"));
+//find richest
+    System.out.println("The richest ACCOUNT IS :"+bank.findRichestAccount());
+
+//find all loan account
+    System.out.println("All loan accounts: " + bank.findAllLoanAccounts());
+    //get all owners
+    System.out.println("All account owners: " + bank.getAllOwners());
+
+
 }
